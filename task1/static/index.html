@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Campus Sensor Monitoring</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Campus Sensor Monitoring</h1>
+    <p>Organizer console — readings, alert rules, and alerts</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>System stats</h2>
+      <pre id="stats">Loading…</pre>
+      <button type="button" id="btn-refresh">Refresh all</button>
+      <button type="button" id="btn-simulate">Send 20 simulated readings</button>
+    </section>
+
+    <section>
+      <h2>Create alert rule</h2>
+      <form id="rule-form">
+        <label>Name <input name="name" required placeholder="Hot library" /></label>
+        <label>Sensor ID (blank = all)
+          <input name="sensor_id" placeholder="library-floor-2" />
+        </label>
+        <label>Metric type
+          <select name="metric_type">
+            <option value="temperature">temperature</option>
+            <option value="air_quality">air_quality</option>
+            <option value="occupancy">occupancy</option>
+          </select>
+        </label>
+        <label>Rule kind
+          <select name="rule_kind" id="rule-kind">
+            <option value="threshold">threshold (single reading)</option>
+            <option value="window">window (average over minutes)</option>
+          </select>
+        </label>
+        <label>Operator
+          <select name="operator">
+            <option value="gt">&gt;</option>
+            <option value="gte">&gt;=</option>
+            <option value="lt">&lt;</option>
+            <option value="lte">&lt;=</option>
+            <option value="eq">=</option>
+          </select>
+        </label>
+        <label>Threshold <input name="threshold" type="number" step="any" required value="30" /></label>
+        <label id="window-label">Window minutes
+          <input name="window_minutes" type="number" min="1" value="10" />
+        </label>
+        <button type="submit">Create rule</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Alert rules</h2>
+      <div id="rules"></div>
+    </section>
+
+    <section>
+      <h2>Alerts</h2>
+      <div id="alerts"></div>
+    </section>
+
+    <section>
+      <h2>Recent readings</h2>
+      <div id="readings"></div>
+    </section>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>

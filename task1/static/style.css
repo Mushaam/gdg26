@@ -1,0 +1,103 @@
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  margin: 0;
+  padding: 0;
+  background: #f7f7f4;
+  color: #1a1a1a;
+  line-height: 1.4;
+}
+
+header {
+  background: #1f3d2b;
+  color: #f3efe6;
+  padding: 1.25rem 1.5rem;
+}
+
+header h1 {
+  margin: 0 0 0.25rem;
+  font-size: 1.6rem;
+}
+
+header p {
+  margin: 0;
+  opacity: 0.9;
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem 1.25rem 3rem;
+}
+
+section {
+  margin-bottom: 1.75rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #ccc;
+}
+
+h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1.2rem;
+}
+
+form {
+  display: grid;
+  gap: 0.5rem;
+  max-width: 420px;
+}
+
+label {
+  display: grid;
+  gap: 0.2rem;
+  font-size: 0.95rem;
+}
+
+input, select, button {
+  font: inherit;
+  padding: 0.35rem 0.5rem;
+}
+
+button {
+  cursor: pointer;
+  background: #1f3d2b;
+  color: #fff;
+  border: none;
+  margin-right: 0.4rem;
+  margin-top: 0.25rem;
+}
+
+button.secondary {
+  background: #555;
+}
+
+button.danger {
+  background: #8b2e2e;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 0.35rem 0.45rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  background: #e8e6df;
+}
+
+pre {
+  background: #eee;
+  padding: 0.75rem;
+  overflow-x: auto;
+}
+
+.muted {
+  color: #666;
+  font-size: 0.9rem;
+}

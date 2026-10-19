@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Workshop Registration</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Workshop Registration</h1>
+    <p>Simple demo: register → outbox → mock notify (with retries)</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Create workshop</h2>
+      <form id="create-form">
+        <label>
+          Title
+          <input type="text" id="workshop-title" required placeholder="Intro to Flask" />
+        </label>
+        <button type="submit">Create</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Register for a workshop</h2>
+      <form id="register-form">
+        <label>
+          Workshop
+          <select id="register-workshop" required></select>
+        </label>
+        <label>
+          Name
+          <input type="text" id="member-name" required placeholder="Ada Lovelace" />
+        </label>
+        <label>
+          Email
+          <input type="email" id="member-email" required placeholder="ada@example.com" />
+        </label>
+        <button type="submit">Register</button>
+      </form>
+      <p id="register-message" class="message"></p>
+    </section>
+
+    <section>
+      <h2>Workshops</h2>
+      <button type="button" id="refresh-btn">Refresh all</button>
+      <div id="workshops"></div>
+    </section>
+
+    <section>
+      <h2>Registrations</h2>
+      <div id="registrations"></div>
+    </section>
+
+    <section>
+      <h2>Notification jobs</h2>
+      <p class="hint">Watch status move from pending → sent (or dead after too many failures).</p>
+      <div id="notifications"></div>
+    </section>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

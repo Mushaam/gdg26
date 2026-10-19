@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+*.pyc
+campus_sensors.db
+campus_sensors.db-wal
+campus_sensors.db-shm
